@@ -1,6 +1,6 @@
 #language:pt
 
-Funcionalidade: Raelizar Login
+Funcionalidade: Realizar Login
   Testes de API de login
 
   Cenario: Realizar login com Sucesso
