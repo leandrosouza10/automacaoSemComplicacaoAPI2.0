@@ -1,4 +1,4 @@
-# Automação Sem Complicacao API 2.0
+# Automação Sem Complicação API 2.0
 ### Projeto criado nas aulas do curso de Automação sem complicação API 2.0, ministrada pelo professor Adam Vinicius da escola ChronosAcademy
 
 ## Comando para executar a API.
