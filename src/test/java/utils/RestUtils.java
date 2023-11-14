@@ -44,7 +44,10 @@ public class RestUtils {
                     .body(json)
                 .when()
                     .post(endPoint)
-                .thenReturn();
+                .then()
+                .log().all()
+                .extract().response();
+
 
     }
 }
