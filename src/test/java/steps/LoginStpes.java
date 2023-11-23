@@ -12,6 +12,8 @@ import java.util.Map;
 
 public class LoginStpes {
     String url = "http://localhost:8080/";
+
+
     @Dado("que tenha um payload valido da API de Login")
     public void queTenhaUmPayloadValidoDaAPIDeLogin() {
         LoginMap.initLogin();
@@ -34,6 +36,14 @@ public class LoginStpes {
         LoginMap.initLogin();
         RestUtils.setBaseURI(url);
         LoginMap.getLogin().putAll(map);
+    }
+
+    @Dado("que tenha realizado o login com dados validos")
+    public void queTenhaRealizadoOLoginComDadosValidos() {
+        queTenhaUmPayloadValidoDaAPIDeLogin();
+        envioUmaRequisicaoDoTipoPOSTDeLogin();
+        armazenoOTokenQueReceboNoResponseDeLogin();
+
     }
 }
 

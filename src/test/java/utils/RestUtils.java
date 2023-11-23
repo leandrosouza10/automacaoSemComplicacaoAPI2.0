@@ -27,6 +27,7 @@ public class RestUtils {
 
     public static Response get(Map<String, String> header, String endPoint) {
         return response = RestAssured.given()
+                    .log().all()
                     .relaxedHTTPSValidation()
                     .headers(header)
                 .when()
