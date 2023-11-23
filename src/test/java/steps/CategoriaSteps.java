@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Quando;
 import maps.LoginMap;
@@ -16,10 +17,15 @@ public class CategoriaSteps {
         header.put("Authorization", "Bearer " + LoginMap.token);
     }
 
-    @Quando("realizar uma requisacao do tipo GET de Categoria")
-    public void realizarUmaRequisacaoDoTipoGETDeCategoria() {
+    @Quando("realizar uma requisicao do tipo GET de Categoria")
+    public void realizarUmaRequisicaoDoTipoGETDeCategoria() {
         RestUtils.get(header, "categorias");
 
     }
 
+
+    @Dado("que altero o campo {string} para {string} do header de categoria")
+    public void queAlteroOCampoParaDoHeaderDeCategoria(String key, String value) {
+        header.put(key,value);
+    }
 }
