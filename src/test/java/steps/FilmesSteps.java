@@ -23,7 +23,7 @@ public class FilmesSteps {
     @Quando("enviar uma requisicao do tipo POST de Filme")
     public void enviarUmaRequisicaoDoTipoPOSTDeFilme() {
         RestUtils.post(FilmesMap.getHeader(), FilmesMap.getFilme(), ContentType.JSON, "filmes");
-        
+
     }
 
     @Entao("armazenar o id que recebo no response de Filme")
@@ -35,19 +35,26 @@ public class FilmesSteps {
     public void enviarUmaRequisicaoDoTipoGETDeFilmeAtravesDoNome() {
         Map<String, Object> param = new HashMap<>();
         String nome = FilmesMap.getFilme().get("nome").toString();
-        param.put("nome",nome);
-        RestUtils.get(FilmesMap.getHeader(),param,"filmes");
+        param.put("nome", nome);
+        RestUtils.get(FilmesMap.getHeader(), param, "filmes");
 
     }
 
     @E("alterar o tipo {int} da lista de categoria de filmes com os valores")
-    public void alterarOTipoDaListaDeCategoriaDeFilmesComOsValores(int indice, Map<String, String>map) {
+    public void alterarOTipoDaListaDeCategoriaDeFilmesComOsValores(int indice, Map<String, String> map) {
         FilmesMap.getListCategoria().get(indice).putAll(map);
-        RestUtils.put(FilmesMap.getHeader(),FilmesMap.getFilme(),ContentType.JSON,"filmes/" + FilmesMap.id);
 
     }
 
     @Quando("realizar uma requisicao do tipo PUT de Filme")
     public void realizarUmaRequisicaoDoTipoPUTDeFilme() {
+        RestUtils.put(FilmesMap.getHeader(), FilmesMap.getFilme(), ContentType.JSON, "filmes/" + FilmesMap.id);
     }
+
+    @Quando("enviar uma requisicao do tipo DELETE de Filme")
+    public void enviarUmaRequisicaoDoTipoDELETEDeFilme() {
+        RestUtils.delete(FilmesMap.getHeader(), "filmes/" + FilmesMap.id);
+    }
+
+
 }

@@ -36,3 +36,16 @@ Funcionalidade: CRUD filme
     Quando enviar uma requisicao do tipo GET de Filme atraves do nome
     Entao validar que recebo status 200 no response
     E validar que no campo "categorias[0].tipo[1]" possui o valor "Terror"
+
+
+  @exclusaoFilme
+  Cenario: Exclusao Filme
+    Quando enviar uma requisicao do tipo DELETE de Filme
+    Entao validar que recebo status 200 no response
+
+
+  @consultaFilmeAposExclusao
+  Cenario: Consulta Filme Apos Exclusao
+    Quando enviar uma requisicao do tipo GET de Filme atraves do nome
+    Entao validar que recebo status 200 no response
+    E validar se a lista esta vazia no response

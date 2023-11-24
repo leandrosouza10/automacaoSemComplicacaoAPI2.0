@@ -95,4 +95,16 @@ public class RestUtils {
 
 
     }
+
+    public static Response delete(Map<String, String> header, String endPoint) {
+        return response = RestAssured.given()
+                .log().all()
+                .relaxedHTTPSValidation()
+                .headers(header)
+                .when()
+                .delete(endPoint)
+                .then()
+                .log().all()
+                .extract().response();
+    }
 }
