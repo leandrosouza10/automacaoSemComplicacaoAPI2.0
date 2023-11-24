@@ -7,13 +7,13 @@ import utils.RestUtils;
 
 public class ValidacaoSteps {
 
-    @Entao("valido que recebo status {int} no response")
-    public void validoQueReceboStatusNoResponse(int status) {
+    @Entao("validar que recebo status {int} no response")
+    public void validarQueReceboStatusNoResponse(int status) {
         Assert.assertEquals(status, RestUtils.getResponse().getStatusCode());
     }
 
-    @E("valido que no campo {string} possui o valor {string}")
-    public void validoQueNoCampoPossuiOValor(String key, String value) {
+    @E("validar que no campo {string} possui o valor {string}")
+    public void validarQueNoCampoPossuiOValor(String key, String value) {
         Assert.assertEquals(value,RestUtils.getResponse().jsonPath().get(key));
     }
 

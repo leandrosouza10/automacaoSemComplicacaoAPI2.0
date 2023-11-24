@@ -18,12 +18,12 @@ public class LoginStpes {
 
     }
 
-    @Quando("envio uma requisicao do tipo POST de Login")
+    @Quando("enviar uma requisicao do tipo POST de Login")
     public void envioUmaRequisicaoDoTipoPOSTDeLogin() {
         RestUtils.post(LoginMap.getLogin(), ContentType.JSON,"auth");
     }
 
-    @E("armazeno o token que recebo no response de Login")
+    @E("armazenar o token que recebo no response de Login")
     public void armazenoOTokenQueReceboNoResponseDeLogin() {
         LoginMap.token = RestUtils.getResponse().jsonPath().get("token");
     }
