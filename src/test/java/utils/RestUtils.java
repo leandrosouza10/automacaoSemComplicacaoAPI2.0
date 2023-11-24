@@ -27,24 +27,40 @@ public class RestUtils {
 
     public static Response get(Map<String, String> header, String endPoint) {
         return response = RestAssured.given()
-                    .log().all()
-                    .relaxedHTTPSValidation()
-                    .headers(header)
+                .log().all()
+                .relaxedHTTPSValidation()
+                .headers(header)
                 .when()
-                    .get(endPoint)
-                    .then()
-                    .log().all()
+                .get(endPoint)
+                .then()
+                .log().all()
                 .extract().response();
     }
 
     public static Response post(Object json, ContentType contentType, String endPoint) {
         return response = RestAssured.given()
-                    .log().all()
-                    .relaxedHTTPSValidation()
-                    .contentType(contentType)
-                    .body(json)
+                .log().all()
+                .relaxedHTTPSValidation()
+                .contentType(contentType)
+                .body(json)
                 .when()
-                    .post(endPoint)
+                .post(endPoint)
+                .then()
+                .log().all()
+                .extract().response();
+
+
+    }
+
+    public static Response post(Map<String, String> header, Object json, ContentType contentType, String endPoint) {
+        return response = RestAssured.given()
+                .log().all()
+                .relaxedHTTPSValidation()
+                .contentType(contentType)
+                .headers(header)
+                .body(json)
+                .when()
+                .post(endPoint)
                 .then()
                 .log().all()
                 .extract().response();

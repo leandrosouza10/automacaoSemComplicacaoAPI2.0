@@ -23,7 +23,6 @@ public class CategoriaSteps {
 
     }
 
-
     @Dado("que altero o campo {string} para {string} do header de categoria")
     public void queAlteroOCampoParaDoHeaderDeCategoria(String key, String value) {
         header.put(key,value);
