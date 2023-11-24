@@ -7,5 +7,12 @@
 ## Api Documentation swagger
 ### http://localhost:8080/swagger-ui.html#/
 
+## Comando para rodar o projeto e gerar relatório através do maven
+### mvn install
+
+## Para executar com uma tag determinada utilizar o comando
+### mvn install -Dcucumber.filter.tags="@colocar a tag aqui"
+
+
 
 
