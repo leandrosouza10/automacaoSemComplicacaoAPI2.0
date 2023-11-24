@@ -10,7 +10,7 @@ import utils.RestUtils;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags = "@cadastroFilme",
+        tags = "@regressivo ",
         glue = "steps",
         plugin = {"json:target/reports/cucumber-Reports.json","pretty"},
         snippets = CucumberOptions.SnippetType.CAMELCASE

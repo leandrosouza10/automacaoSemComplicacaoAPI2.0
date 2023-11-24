@@ -1,5 +1,6 @@
 #language:pt
 
+  @filmes @regressivo
   Funcionalidade: CRUD filme
 
     @cadastroFilme
@@ -12,6 +13,7 @@
       E valido que no campo "categorias.tipo[1]" possui o valor "Comedia"
       E armazeno o id que recebo no response de Filme
 
+    @consultaFilme
     Cenario: Consulta Filme
 
       Dado que tenha realizado o login com dados validos

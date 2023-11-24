@@ -1,9 +1,10 @@
 #language:pt
 
+@login @regressivo
 Funcionalidade: Realizar Login
   Testes de API de login
 
-  @loginSucesso @regressivo
+  @loginSucesso
   Cenario: Realizar login com Sucesso
     Dado que tenha um payload valido da API de Login
     Quando envio uma requisicao do tipo POST de Login
@@ -18,11 +19,12 @@ Funcionalidade: Realizar Login
     Quando envio uma requisicao do tipo POST de Login
     Entao valido que recebo status 400 no response
 
-    @loginUsuarioInvalido @regressivo
+    @loginUsuarioInvalido
     Exemplos:
       | cenario          | email              | senha    |
       | usuario invalido | invalido@email.com | 123456   |
-    @loginSenhaInvalida @regressivo
+
+    @loginSenhaInvalida
     Exemplos:
       | cenario          | email              | senha    |
       | senha invalida   | aluno@email.com    | invalido |

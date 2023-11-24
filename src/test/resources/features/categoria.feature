@@ -1,7 +1,7 @@
 #language:pt
 
 
-  @categoria
+  @categoria @regressivo
   Funcionalidade: Consulta Categoria
 
     @categotiaSucesso
