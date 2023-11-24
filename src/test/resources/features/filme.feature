@@ -1,6 +1,6 @@
 #language:pt
 
-@filmes @regressivo
+@filmes
 Funcionalidade: CRUD filme
 
   Contexto:

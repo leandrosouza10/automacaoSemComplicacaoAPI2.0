@@ -21,10 +21,10 @@ Funcionalidade: Realizar Login
 
     @loginUsuarioInvalido
     Exemplos:
-      | cenario          | email              | senha    |
-      | usuario invalido | invalido@email.com | 123456   |
+      | cenario          | email              | senha  |
+      | usuario invalido | invalido@email.com | 123456 |
 
     @loginSenhaInvalida
     Exemplos:
-      | cenario          | email              | senha    |
-      | senha invalida   | aluno@email.com    | invalido |
+      | cenario        | email           | senha    |
+      | senha invalida | aluno@email.com | invalido |
