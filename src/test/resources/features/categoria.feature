@@ -17,11 +17,11 @@
     Cenario: Realizar consulta categoria sem token
       Quando realizar uma requisicao do tipo GET de Categoria
       Entao validar que recebo status 403 no response
-      E validar que no campo "message" possui o valor "Access Denied"
+      E validar que no campo "error" possui o valor "Forbidden"
 
     @categoriaTokenInvalido
     Cenario: Realizar consulta categoria com token invalido
       Dado que altero o campo "Authorization" para "invalido" do header de categoria
       Quando realizar uma requisicao do tipo GET de Categoria
       Entao validar que recebo status 403 no response
-      E validar que no campo "message" possui o valor "Access Denied"
+      E validar que no campo "error" possui o valor "Forbidden"
